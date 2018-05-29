@@ -11,7 +11,7 @@ const database = require('./db')
 const { PORT,MONGO_URL } = config;
 const app = express();
 app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded( {extended: true}))
 
 app.use("/",indexRoute);
 app.use("/goods",goodsRoute);
